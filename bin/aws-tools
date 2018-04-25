@@ -1,6 +1,6 @@
 #! /bin/sh
 
-for brew in awscli git git-crypt jq terraform; do
+for brew in awscli git git-crypt jq packer s3cmd terraform vault; do
   if brew info -p ${brew} >/dev/null 2>&1; then
     echo ${brew} is installed
   else
