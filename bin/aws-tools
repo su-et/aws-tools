@@ -1,0 +1,10 @@
+#! /bin/sh
+
+for brew in awscli git git-crypt jq terraform; do
+  if brew info -p ${brew} >/dev/null 2>&1; then
+    echo ${brew} is installed
+  else
+    echo ${brew} is NOT installed\; please install with 'brew install ${brew}'
+  fi
+done
+
